@@ -1,16 +1,16 @@
-import java.util.*;
+interface BookingStrategy {
+    void book();
+}
 
-class BookingService {
-    Map<Integer, String> bookings = new HashMap<>();
-
-    void book(int room, String name) {
-        bookings.put(room, name);
+class NormalBooking implements BookingStrategy {
+    public void book() {
+        System.out.println("Normal booking");
     }
 }
 
 public class HotelBookingApp {
     public static void main(String[] args) {
-        BookingService service = new BookingService();
-        service.book(101, "John");
+        BookingStrategy strategy = new NormalBooking();
+        strategy.book();
     }
 }
