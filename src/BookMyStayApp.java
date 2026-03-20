@@ -2,10 +2,11 @@ import java.util.*;
 
 public class HotelBookingApp {
     public static void main(String[] args) {
-        Map<Integer, String> bookings = new HashMap<>();
+        LinkedList<String> history = new LinkedList<>();
 
-        if (!bookings.containsKey(102)) {
-            System.out.println("Room available");
-        }
+        history.add("Room booked");
+        history.add("Room cancelled");
+
+        System.out.println(history);
     }
 }
