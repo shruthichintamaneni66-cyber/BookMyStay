@@ -2,11 +2,10 @@ import java.util.*;
 
 public class HotelBookingApp {
     public static void main(String[] args) {
-        Queue<String> queue = new LinkedList<>();
+        Map<Integer, String> bookings = new HashMap<>();
 
-        queue.add("Customer1");
-        queue.add("Customer2");
+        bookings.put(101, "John");
 
-        System.out.println("Serving: " + queue.poll());
+        System.out.println(bookings);
     }
 }
