@@ -5,7 +5,8 @@ public class HotelBookingApp {
         Map<Integer, String> bookings = new HashMap<>();
 
         bookings.put(101, "John");
+        bookings.remove(101);
 
-        System.out.println(bookings);
+        System.out.println("Booking cancelled");
     }
 }
