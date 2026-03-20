@@ -1,23 +1,16 @@
 import java.util.*;
 
-class Room {
-    int id;
-    boolean booked;
-
-    Room(int id) {
-        this.id = id;
-        this.booked = false;
-    }
-}
-
 public class HotelBookingApp {
     public static void main(String[] args) {
-        List<Room> rooms = new ArrayList<>();
+        Set<Integer> bookedRooms = new HashSet<>();
 
-        for (int i = 1; i <= 5; i++) {
-            rooms.add(new Room(i));
+        int room = 101;
+
+        if (!bookedRooms.contains(room)) {
+            bookedRooms.add(room);
+            System.out.println("Room booked");
+        } else {
+            System.out.println("Already booked");
         }
-
-        System.out.println("Rooms created: " + rooms.size());
     }
 }
